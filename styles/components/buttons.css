@@ -1,0 +1,183 @@
+@import url(../global-styles.css);
+
+/* icon button outline */
+a.icon-button-outline > svg {
+  padding: 10px;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px var(--n20) solid;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease-out, trasform 0.2s;
+}
+
+a.icon-button-outline > svg > path {
+  fill: var(--n90);
+}
+
+a.icon-button-outline > svg:hover {
+  transition: 0.2s ease-out;
+  background-color: rgba(0, 0, 0, 0.09);
+  border: 1px var(--n10) solid;
+  box-shadow: 0 2px 12px rgba(18, 18, 18, 0.15);
+  transform: translate(0, -2px);
+}
+
+a.icon-button-outline > svg:active {
+  background-color: var(--n90);
+  border: 1px var(--n90) solid;
+  transform: scale(0.9);
+}
+
+a.icon-button-outline > svg:active > path {
+  fill: var(--n00);
+}
+
+/* label button primary */
+a.label-button-primary {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  padding: 10px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--p100);
+  border-radius: 1000px;
+  color: var(--n00);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease-out, trasform 0.2s;
+}
+
+a.label-button-primary:hover {
+  background-color: rgba(72, 90, 255, 0.8);
+  box-shadow: 0 2px 12px rgba(18, 18, 18, 0.15);
+  transform: translate(0, -2px);
+}
+
+a.label-button-primary:active {
+  background-color: var(--n100);
+  transform: scale(0.9);
+}
+
+/* Label icon button primary */
+a.label-icon-button-primary {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  padding: 10px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--p100);
+  border-radius: 1000px;
+  color: var(--n00);
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease-out, trasform 0.2s;
+}
+a.label-icon-button-primary > svg {
+  height: 24px;
+  width: 24px;
+  margin-right: var(--size250);
+}
+a.label-icon-button-primary > svg > path {
+  fill: var(--n00);
+}
+a.label-icon-button-primary:hover {
+  background-color: rgba(72, 90, 255, 0.8);
+  box-shadow: 0 2px 12px rgba(18, 18, 18, 0.15);
+  transform: translate(0, -2px);
+}
+a.label-icon-button-primary:active {
+  background-color: var(--n100);
+  transform: scale(0.9);
+}
+
+/* nav label */
+a.nav-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  padding: 9px 16px 4px 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--n80);
+  transition: trasform 0.2s;
+}
+
+a.nav-label:hover {
+  color: var(--n60);
+}
+
+a.nav-label:active {
+  color: var(--p100);
+  transform: scale(0.9);
+}
+
+@media (prefers-color-scheme: dark) {
+  a.icon-button-outline > svg {
+    border: 1px var(--n60) solid;
+  }
+  a.icon-button-outline > svg > path {
+    fill: var(--n10);
+  }
+  a.icon-button-outline > svg:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px var(--n80) solid;
+  }
+  a.icon-button-outline > svg:active {
+    background-color: var(--n00);
+    border: 1px var(--n00) solid;
+  }
+  a.icon-button-outline > svg:active > path {
+    fill: var(--n100);
+  }
+
+  a.label-button-primary {
+    background-color: var(--p40);
+    color: var(--n100);
+  }
+  a.label-button-primary:hover {
+    background-color: rgba(182, 189, 255, 0.8);
+  }
+  a.label-button-primary:active {
+    background-color: var(--n00);
+    color: var(--n100);
+  }
+
+  a.label-icon-button-primary {
+    background-color: var(--p40);
+    color: var(--n100);
+  }
+  a.label-icon-button-primary > svg > path {
+    fill: var(--n100);
+  }
+  a.label-icon-button-primary:hover {
+    background-color: rgba(182, 189, 255, 0.8);
+  }
+  a.label-icon-button-primary:active {
+    background-color: var(--n00);
+  }
+
+  a.nav-label {
+    color: var(--n20);
+  }
+  a.nav-label:hover {
+    color: var(--n40);
+  }
+  a.nav-label:active {
+    color: var(--p40);
+  }
+}
+@media screen and (max-width: 576px) {
+  a.label-button-primary {
+    font-size: 12px;
+  }
+  a.label-button-outline {
+    font-size: 12px;
+  }
+  a.label-icon-button-primary {
+    font-size: 12px;
+  }
+}

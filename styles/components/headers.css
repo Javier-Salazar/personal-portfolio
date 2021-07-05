@@ -1,0 +1,177 @@
+@import url(../global-styles.css);
+header {
+  width: 100%;
+  padding: 32px 0 16px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header > a > svg {
+  height: 64px;
+  width: 64px;
+}
+header > .menu {
+  width: fit-content;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+header > .menu > .nav {
+  margin-right: var(--size400);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.menu > .nav > .nav-item {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.menu > .nav > .nav-item > .selector {
+  width: 80%;
+  height: 5px;
+  border-radius: 10px;
+  align-self: center;
+  background-color: var(--p140);
+  animation: 0.6s ease-out 0s 1 slideSelector;
+}
+
+header > .menu > svg.sun-icon {
+  width: 24px;
+  height: 24px;
+}
+header > .menu > svg.moon-icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+header > .fries-menu {
+  height: 24px;
+  width: 24px;
+  margin-right: var(--size400);
+  cursor: pointer;
+  display: none;
+}
+
+.fries-menu > rect {
+  fill: var(--n100);
+}
+
+@keyframes slideSelector {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--n100);
+  }
+
+  .menu > .nav > .nav-item > .selector {
+    background-color: var(--p60);
+  }
+
+  header > .menu > svg.sun-icon {
+    display: none;
+  }
+  header > .menu > svg.moon-icon {
+    display: block;
+  }
+  .fries-menu > rect {
+    fill: var(--n00);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    width: 100%;
+    padding: 8px 0;
+    position: relative;
+  }
+  header > a > svg {
+    height: 48px;
+    width: 48px;
+  }
+  header > .menu {
+    display: none;
+  }
+  header > .menu > .nav {
+    display: none;
+  }
+
+  header > .menu.show {
+    width: 100%;
+    height: calc(100vh - 68px);
+    background-color: var(--n00);
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    display: inline-flex;
+    top: 68px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 16px;
+  }
+  header > .menu > .nav.show {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 var(--size200) 0;
+    display: inline-flex;
+  }
+  header > .menu > .nav > a.nav-label {
+    width: 100%;
+    text-align: center;
+  }
+  header > .fries-menu {
+    display: inline-flex;
+  }
+
+  .menu > .nav > .nav-item > .selector {
+    animation: none;
+  }
+
+  .menu.show + .fries-menu > .fries-menu-open {
+    width: 20px;
+    animation: 0.6s ease-out 0s 1 menuOpen;
+  }
+
+  .menu + .fries-menu > .fries-menu-open {
+    width: 15px;
+    animation: 0.6s ease-out 0s 1 menuClose;
+  }
+
+  @keyframes menuOpen {
+    0% {
+      width: 15px;
+    }
+  
+    100% {
+      width: 20px;
+    }
+  }
+
+  @keyframes menuClose {
+    0% {
+      width: 20px;
+    }
+  
+    100% {
+      width: 15px;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    header > .menu.show {
+      background-color: var(--n100);
+    }
+  }
+}

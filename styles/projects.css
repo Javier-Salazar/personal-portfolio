@@ -1,0 +1,60 @@
+@import url(global-styles.css);
+section {
+  margin: var(--size500) 0;
+}
+.title > h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  color: var(--n100);
+  margin: 0 0 var(--size350) 0;
+}
+.title > .divider {
+  width: 378px;
+  height: 1px;
+  border-top: 1px var(--n20) dashed;
+}
+.title > p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  color: var(--n100);
+  margin-top: var(--size450);
+}
+section > .content {
+  margin-top: 80px;
+}
+@media (prefers-color-scheme: dark) {
+  .title > h2 {
+    color: var(--n00);
+  }
+  .title > .divider {
+    border-top: 1px var(--n20) dashed;
+  }
+  .title > p {
+    color: var(--n00);
+  }
+}
+@media screen and (max-width: 576px) {
+  section {
+    margin: var(--size400) 0;
+  }
+  .title > h2 {
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0;
+  }
+  .title > .divider {
+    display: none;
+  }
+  .title > p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: var(--size350);
+  }
+  section > .content {
+    margin-top: var(--size500);
+  }
+}

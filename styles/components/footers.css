@@ -1,0 +1,60 @@
+@import url(../global-styles.css);
+footer {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--n00);
+}
+footer > p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-decoration: none;
+  color: var(--n100);
+  margin: 0 0 var(--size350) 0;
+}
+footer > .social-media {
+  margin: 0;
+}
+footer > .social-media > a {
+  padding: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+}
+footer > .social-media > a > svg {
+  height: 24px;
+  width: 24px;
+}
+footer > .social-media > a > svg > path {
+  fill: var(--n40);
+}
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: var(--n100);
+  }
+  footer > p {
+    color: var(--n00);
+  }
+  footer > .social-media > a > svg > path {
+    fill: var(--n60);
+  }
+}
+@media screen and (max-width: 576px) {
+  footer {
+    height: 250px;
+    flex-wrap: wrap;
+  }
+  footer > .social-media > a > svg > path {
+    fill: var(--n90);
+  }
+  @media (prefers-color-scheme: dark) {
+    footer > .social-media > a > svg > path {
+      fill: var(--n10);
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import url(global-styles.css);
+article {
+  margin: var(--size500) 0;
+}
+article > .title {
+  display: inline-block;
+}
+.title > h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  color: var(--n100);
+  margin: 0 0 var(--size350) 0;
+}
+.title > .divider {
+  width: 378px;
+  height: 1px;
+  border-top: 1px var(--n20) dashed;
+}
+article .content {
+  margin-top: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.content > .content-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--n100);
+  width: 45%;
+}
+.content > .article-image {
+  width: 45%;
+}
+.content-text > p {
+  text-align: left;
+  margin: 0 0 var(--size350) 0;
+}
+.content-text > a,
+p > a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--p100);
+}
+.content-text > a:active {
+  color: var(--p140);
+}
+@media (prefers-color-scheme: dark) {
+  .title > h2 {
+    color: var(--n00);
+  }
+  .title > .divider {
+    border-top: 1px var(--n20) dashed;
+  }
+  .content > .content-text {
+    color: var(--n00);
+  }
+  .content-text > a,
+  p > a {
+    color: var(--p40);
+  }
+}
+@media screen and (max-width: 576px) {
+  article {
+    margin: var(--size400) 0;
+  }
+  article > .title {
+    display: block;
+  }
+  .title > h2 {
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0 0 var(--size300) 0;
+  }
+  .title > .divider {
+    display: none;
+  }
+  article .content {
+    margin-top: var(--size400);
+    flex-direction: column-reverse;
+  }
+  .content > .content-text {
+    font-size: 16px;
+    line-height: 26px;
+    width: 100%;
+  }
+  .content > .article-image {
+    width: 60%;
+  }
+  .content-text > p {
+    text-align: left;
+    margin: 0 0 var(--size300) 0;
+  }
+}

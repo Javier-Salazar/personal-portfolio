@@ -1,0 +1,57 @@
+@import url(components/headers.css);
+@import url(components/buttons.css);
+@import url(components/blob.css);
+@import url(components/float-action.css);
+@import url(components/cards.css);
+@import url(components/images.css);
+@import url(components/footers.css);
+:root {
+  --p140: #2b3799;
+  --p100: #485bff;
+  --p80: #6d7cff;
+  --p60: #919dff;
+  --p40: #b6bdff;
+  --n100: #121212;
+  --n95: #1e1e1e;
+  --n90: #2a2a2a;
+  --n80: #414141;
+  --n60: #717171;
+  --n40: #a0a0a0;
+  --n20: #d0d0d0;
+  --n10: #e7e7e7;
+  --n05: #f3f3f3;
+  --n00: #fff;
+  --size200: 8px;
+  --size250: 12px;
+  --size300: 16px;
+  --size350: 24px;
+  --size400: 32px;
+  --size425: 40px;
+  --size450: 48px;
+  --size500: 64px;
+  --size600: 128px;
+  --size625: 160px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.container {
+  width: 82%;
+  margin: auto;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--n100);
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    width: 92%;
+  }
+}
